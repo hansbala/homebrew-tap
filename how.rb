@@ -4,8 +4,8 @@ class How < Formula
   
   # --------------- Updates for each release ---------------
   current_version = "0.1.1"
-  mac_sha         = "SHA256_OF_MAC_BINARY"
-  linux_sha       = "SHA256_OF_LINUX_BINARY"
+  mac_sha         = "6331ed02f7e8165f97317f52531c741e2059c9f16e795e2a1c4350eb5ef4c1a8"
+  linux_sha       = "d0b02a5f752f8dbb6ed0b2f260e5debf39ff27358da94888f09ce101a6927d55"
   # --------------------------------------------------------
 
   version current_version
