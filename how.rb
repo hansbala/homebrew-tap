@@ -2,14 +2,18 @@ class How < Formula
   desc "Natural Language to Shell Command Translator"
   homepage "https://github.com/hansbala/how"
   
-  # Single source of truth
+  # --------------- Updates for each release ---------------
   current_version = "0.1.1"
+  mac_sha         = "SHA256_OF_MAC_BINARY"
+  linux_sha       = "SHA256_OF_LINUX_BINARY"
+  # --------------------------------------------------------
+
   version current_version
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/hansbala/how/releases/download/v#{current_version}/how-darwin-arm64"
-      sha256 "SHA256_OF_MAC_BINARY"
+      sha256 mac_sha
     else
       odie "This tool only supports Apple Silicon (aarch64)."
     end
@@ -18,7 +22,7 @@ class How < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/hansbala/how/releases/download/v#{current_version}/how-linux-amd64"
-      sha256 "SHA256_OF_LINUX_BINARY"
+      sha256 linux_sha
     end
   end
 
